@@ -156,4 +156,3 @@ class Compra_Vehiculo{
     }
 
 }
-
