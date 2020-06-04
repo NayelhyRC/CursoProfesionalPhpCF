@@ -5,12 +5,24 @@ abstract class Persona
     /*Las clases definidas como abstractas no se pueden instanciar y cualquier clase que contiene al menos un método abstracto debe ser definida como tal. Los métodos definidos como abstractos simplemente declaran la firma del método, pero no pueden definir la implementación. */
 
     //atributos
-    public $name;
+    private $name;
     private $last_name;
     public $age;
     public $nacionality;
     public $sex;
     static $color = 'rojo';
+
+
+    public function getName()
+    {
+        return $this->name;
+    }
+
+
+    public function setName($name)
+    {
+        $this->name = $name;
+    }
 
     //constructor
     function __construct()

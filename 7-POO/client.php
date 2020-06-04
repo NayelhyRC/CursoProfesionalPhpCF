@@ -1,8 +1,13 @@
 <?php
 require_once('person.php');
+require_once ('client.php');
+require_once('operation.php');
 class Client extends Persona{
     private $common;
     private $email;
+
+    //hago uso del trait para poder usar sus funciones
+    use Operation;
 
     //enviamos forzozamente un dato tipo string por get
     public function getCommon():String
@@ -37,4 +42,13 @@ class Client extends Persona{
     {
         echo 'Cliente corriendo';
     }
+
+    function pay(){
+        echo 'El dinero que gasté fue : '.$this->plus('33',44).' pesos';
+    }
+
+    function say(Employee $employee){ //en este metodo recibimos forzozamente un empleado
+        echo "{$this->getName()} felicitame al empleado/a {$employee->getName()}";
+    }
+
 }
