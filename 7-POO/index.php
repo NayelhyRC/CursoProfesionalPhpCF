@@ -1,12 +1,20 @@
 <?php
-require_once('clases.php');
+declare(strict_types=1);
+require_once('person.php');
+require_once('client.php');
+require_once('employee.php');
+$luren = new Client();
+//$luren->eat();
 
-$compra_antonio = new Compra_Vehiculo("deportivo");
-$compra_antonio->climatizador();
-$compra_antonio->estereo();
-$compra_antonio->tapiceria_cuero('blanco');
 
-//llamo al metodo estatico
-Compra_Vehiculo::descuento_gobierno();
 
-echo 'Total a pagar: '.$compra_antonio->precio_final(). ' pesos';
+//cuando hacemos uso de atributos privados usamos get y set
+
+$luren->setEmail('luren@yahoo.com');
+echo $luren->getEmail();
+
+/*$juan new Persona(); no me dejaria hacer una instancia a la clase persona porque esta es abstracta*/
+$luren->run();
+
+$eze = new Employee();
+$eze->run();
