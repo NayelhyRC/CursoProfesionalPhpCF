@@ -52,6 +52,9 @@ abstract class Persona
         }
     }
 
+    /*Una interfaz es muy similar a una clase abstracta con la diferencia que al crear una clase abstracta "obligamos"
+    a que todos nuestras clases hijas implementen los componentes (atributos y métodos) de la clase padre, en cambio mediante
+    un interface nosotros mismos elegimos a que clase vamos a implementar nuestros componentes.*/
 
 }
 

@@ -1,6 +1,7 @@
 <?php
 require_once('person.php');
-class Employee extends Persona{
+require_once('respiracion_interface.php');
+class Employee extends Persona implements Respiracion {
     private $position;
     private $schelude;
 
@@ -12,5 +13,30 @@ class Employee extends Persona{
     function run()
     {
         echo 'Empleado corriendo';
+    }
+
+    public function cavidadNasal()
+    {
+
+    }
+
+    public function traquea()
+    {
+
+    }
+
+    public function nariz()
+    {
+
+    }
+
+    public function bronquio()
+    {
+
+    }
+
+    public function pulmon()
+    {
+
     }
 }
