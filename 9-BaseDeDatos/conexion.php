@@ -1,5 +1,5 @@
 <?php
-/*PDO Es una capa de para el acceso a la BD para acceder y administrar bases de datos en aplicaciones php
+/*PDO es una API, como mysqli, si queremos cambiar de sistemas de gestor de bd conviene usar PDO Debido a q este es compatible con la mayoria de los gestores en cambio mysqli es solo para mysql  Es una capa de para el acceso a la BD para acceder y administrar bases de datos en aplicaciones php
 Todos los gestores de bd tienen un pdo especifico. En php init podemos instalar los controladores pdo en caso de que necesitemos y tambien podemos descomentarlos
 de manera que podamos usar -> para eso nos dirigimos a local host -> Php Info -> buscar donde está php init -> buscar y descomentar el pdo que necesitamos extension=php_pdo_mysql.dll
 */
