@@ -15,7 +15,7 @@ class Connection
     private $user = 'root';
     private $pass = '';
     private $dbName = 'cursocfphp';
-    private $charset = 'utf-8';
+    private $charset = 'utf8';
 
     protected function conexion()
     {
