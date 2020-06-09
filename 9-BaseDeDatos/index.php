@@ -15,3 +15,21 @@ $animal->color='red';
 //$animal->delete(1);
 //$animal->update();*/
 require_once 'view/animal.php';
+
+if(!isset($_REQUEST['controller']))
+{
+    require_once 'controller/animal_controller.php';
+    $controller= new AnimalController();
+    $controller->indexAnimal();//si no recibimos ningun controlador que cargar me va a cargar esta por defecto
+}//pero si recibimos un controlador que cargar
+else{
+    $controller= $_REQUEST['controller'];
+    $action = $_REQUEST['action'];
+    require_once 'controller/'.$controller.'_controller.php';
+    $controller = ucwords($controller); //nos convierte la primera letra en minuscula ucwords
+    $controller = new $controller;
+    call_user_func(array($controller,$action)); //recibe un arreglo donde le pasamos la instancia y el metodo q queremos q se ejecute
+
+
+}
+
