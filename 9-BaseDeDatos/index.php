@@ -1,5 +1,5 @@
 <?php
-require_once 'animal.php';
+/*require_once 'model/animal.php';
 $animal = new Animal();
 print_r($animal->get_All()); //para obtener todos los registros de nuestra tabla animal
 
@@ -13,4 +13,5 @@ $animal->age=2;
 $animal->color='red';
 //$animal->create();
 //$animal->delete(1);
-//$animal->update();
+//$animal->update();*/
+require_once 'view/animal.php';
